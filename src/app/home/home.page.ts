@@ -11,38 +11,20 @@ import { MessageService } from '../services/message.service';
 })
 export class HomePage {
 
-  pessoa ={
-    foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAv4YmLgkzgbI3sdzubVgtNTRxRFUpH0O25UcaQDHhwgzOVPuOWehjPfQlib-IperHP9ltdHa5Hwl37piXU1jyFxNTufbG73bnFflikw',
-    nome: 'Chefinho',
-    objetivo: 'Programador HTML & CSS',
-    contato:{
-      email: 'chefinho@gmail.com',
-      telefone: '(11) 991696969',
-      github: 'github.com/chefinho',
-      linkedin:'linkedin.com/chefinho'
-    },
-    softskills:[
-      'Trabalho em Grupo',
-      'Comunicação',
-      'Resiliência',
-      'Proatividade',
-      'Criatividade'
-    ],
-    formacao:[
-      {
-        ano_inicio: '2023',
-        ano_termino: '2024',
-        instituicao: 'Etec Sales Gomes',
-        curso: 'Desenvovilmento de Sistemas'
-      },
-      {
-        ano_inicio: '2025',
-        ano_termino: '2028',
-        instituicao: 'Faculdade de Tecnologia de Tatuí',
-        curso: 'Análise e Desenvovilmento de Sistemas'
-      }
-    ]
+  perfil = {
+    foto:'https://www.quadrorama.com.br/wp-content/uploads/2023/08/leon.png',
+    nome:'Rodrigo Fonseca',
+    social:'@rodfonseca',
+    idioma:'Português',
+    cidade:'Tatuí / SP',
+    tempo:'desde junho 1997'
+
   }
 
-  constructor(){ }
+  biografia={
+    bio:'Programador com mais de 5 anos de experiência em fullstack'
+  }
+
+
+  constructor() { }
 }
