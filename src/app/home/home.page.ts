@@ -11,38 +11,77 @@ import { MessageService } from '../services/message.service';
 })
 export class HomePage {
 
-  pessoa ={
-    foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAv4YmLgkzgbI3sdzubVgtNTRxRFUpH0O25UcaQDHhwgzOVPuOWehjPfQlib-IperHP9ltdHa5Hwl37piXU1jyFxNTufbG73bnFflikw',
-    nome: 'Chefinho',
-    objetivo: 'Programador HTML & CSS',
-    contato:{
-      email: 'chefinho@gmail.com',
-      telefone: '(11) 991696969',
-      github: 'github.com/chefinho',
-      linkedin:'linkedin.com/chefinho'
-    },
-    softskills:[
-      'Trabalho em Grupo',
-      'Comunicação',
-      'Resiliência',
-      'Proatividade',
-      'Criatividade'
-    ],
-    formacao:[
-      {
-        ano_inicio: '2023',
-        ano_termino: '2024',
-        instituicao: 'Etec Sales Gomes',
-        curso: 'Desenvovilmento de Sistemas'
-      },
-      {
-        ano_inicio: '2025',
-        ano_termino: '2028',
-        instituicao: 'Faculdade de Tecnologia de Tatuí',
-        curso: 'Análise e Desenvovilmento de Sistemas'
-      }
-    ]
-  }
+  segments: string ='usuarios';
 
-  constructor(){ }
+  usuarios = [
+    {
+      nome: 'Seleide Silva',
+      idade: 20,
+      genero: 'Feminino', 
+      rotinas:[
+        {
+          dia: 'segunda-feira',
+          treinos: [
+            "Rosca Direta",
+            "crucifixo",
+            "Remada Curvada"
+          ]
+        },
+        {
+          dia: 'quarta-feira',
+          treinos: [
+            "Rosca Invertida",
+            "Pulley",
+            "Remada Sentada"
+          ]
+        },
+        {
+          dia: 'sexta-feira',
+          treinos: [
+            "Supino Inclinado",
+            "Biceps Corda",
+            "Biceps Hulk Invertido"
+          ]
+        }
+      ]
+    },
+    {
+      nome: 'Marciano Verdinho',
+      idade: 25,
+      genero: 'masculino', 
+      rotinas:[
+        {
+          dia: 'terça-feira',
+          treinos: [
+            "Prancha Redonda",
+            "Jumping Bom dia Popai",
+            "Flexão de Costas"
+          ]
+        },
+        {
+          dia: 'quinta-feira',
+          treinos: [
+            "Rosca direta",
+            "Pulley corda",
+            "Remada curvada"
+          ]
+        },
+        {
+          dia: 'sabado',
+          treinos: [
+            "Supino declinado",
+            "Triceps Frânces",
+            "Agachamento"
+          ]
+        }
+      ]
+    }
+  ] 
+
+  constructor(){}
+
+
+  trocar(event: any){
+    this.segments = event.detail.value;
+  }
 }
