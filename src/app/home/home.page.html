@@ -35,25 +35,19 @@
         </ion-col>
       </ion-row>
 
+
       <ion-row>
-        <ion-col class="ion-text-center" size="4">
-          <ion-card>
-            <h3>45.6k</h3>
-            <h3>curtidas</h3>
-          </ion-card>
-        </ion-col>
-        <ion-col class="ion-text-center" size="4">
-          <ion-card>
-            <h3>45.6k</h3>
-            <h3>seguindo</h3>
-          </ion-card>
-        </ion-col>
-        <ion-col class="ion-text-center" size="4">
-          <ion-card>
-            <h3>45.6k</h3>
-            <h3>amigos</h3>
-          </ion-card>
-        </ion-col>
+       <ion-row>
+        <ng-container *ngFor="let metrica of this.social.metricas">
+          <ion-item>
+            <ion-label>
+              
+              {{metrica.texto}}
+              {{metrica.valor}}
+            </ion-label>
+          </ion-item>
+        </ng-container>
+       </ion-row>
       </ion-row>
 
       <ion-row>
@@ -63,8 +57,9 @@
       </ion-row>
 
       <ion-row>
-        <h1>Postagens</h1>
+        <h1>Postagens de Amigos</h1>
       </ion-row>
+
 
     </ion-col>
   </ion-row>

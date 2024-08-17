@@ -25,6 +25,22 @@ export class HomePage {
     bio:'Programador com mais de 5 anos de experiência em fullstack'
   }
 
+  social={
+    metricas:[
+      {
+        texto: 'curtidas',
+        valor: '22k'
+      },
+      {
+        texto: 'curtidas',
+        valor: '32k'
+      },
+      {
+        texto: 'curtidas',
+        valor: '28k'
+      }
+    ],
+  }
 
   constructor() { }
 }
