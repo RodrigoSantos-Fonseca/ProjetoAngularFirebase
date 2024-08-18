@@ -14,3 +14,24 @@
 .titulo-funcao{
     font-size: 2rem;
 }
+
+.foto-amigos{
+    border-radius: 10px;
+    outline: 3px solid white;
+    border-radius: 50%;
+    max-width:100px;
+    max-height:100px;
+    width: 100px;
+    height: 100px;
+}
+
+ion-item {
+    --background: transparent;
+  }
+
+  ion-card {
+    --background: transparent;
+  }
+  
+
+  

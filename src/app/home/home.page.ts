@@ -12,12 +12,12 @@ import { MessageService } from '../services/message.service';
 export class HomePage {
 
   perfil = {
-    foto:'https://www.quadrorama.com.br/wp-content/uploads/2023/08/leon.png',
-    nome:'Rodrigo Fonseca',
-    social:'@rodfonseca',
-    idioma:'Português',
-    cidade:'Tatuí / SP',
-    tempo:'desde junho 1997'
+    foto:'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQsQOD9-q44KepHeFQXMaPzLCIEfXiUo__Ov6vXFKpib2xR5as8',
+    nome:'Tiririca Florentino',
+    social:'@tirflorentino',
+    idioma:'Cearense',
+    cidade:'Ipipoca / CE',
+    tempo:'desde junho 1980 '
 
   }
 
@@ -28,18 +28,39 @@ export class HomePage {
   social={
     metricas:[
       {
-        texto: 'curtidas',
+        texto: 'Curtidas',
         valor: '22k'
       },
       {
-        texto: 'curtidas',
-        valor: '32k'
+        texto: 'Seguindo',
+        valor: '2.3k'
       },
       {
-        texto: 'curtidas',
-        valor: '28k'
+        texto: 'Amigos',
+        valor: '1.4 k'
       }
     ],
+
+    amigos:[
+      {
+        foto:'https://files.sunoresearch.com.br/p/uploads/2018/09/Elon-Musk-1024x1024.jpg',
+        nome:'Elon Musk',
+        perfil:'@musk',
+        post:'Pessoal,como pode o mundo acabar em 2024 se meu iogurte vence em 2025'
+      },
+      {
+        foto:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStaXrMrjkjbUISIck4kGjlm02rnXgxpHlq3sFS9xCqIzuyPppe3SHxA7sFfvqQyHmorHGxVu6bgwB7rnHGgk-leOfGiTPcLY8Yc1qzoQ',
+        nome:'Snoop Doog',
+        perfil:'@SnoopDoog',
+        post:'Se a água é transparente, por que o gelo é branco?'
+      },
+      {
+        foto:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHR59P3pBQCippxMawDmw2ZEpnn8MBOhQJ7A&s',
+        nome:'Jair M. Bolsonaro',
+        perfil:'@bolsonaro',
+        post:'Sabia que se colocarmos a calculadora na geladeira teremos tudo friamente calculdado?'
+      }
+    ]
   }
 
   constructor() { }
