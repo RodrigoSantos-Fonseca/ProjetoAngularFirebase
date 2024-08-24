@@ -76,7 +76,33 @@ export class HomePage {
         }
       ]
     }
-  ] 
+  ]
+
+  treinos =[
+    {
+      nome:'Treino A (Costas e Biceps)',
+      exercicios: [
+        "Pulley Frente",
+        "Remada Curvada",
+        "Serrote com Halter",
+        "Rosca Martelo",
+        "Banco Scott",
+        "Rosca Concentrada"
+      ]
+    },
+    {
+      nome:'Treino B (Perna)',
+      exercicios: []
+    },
+    {
+      nome:'Treino C (Peito e Triceps)',
+      exercicios:[]
+    },
+    {
+      nome:'Treino D (Ombro)',
+      exercicios:[]
+    }
+    ];
 
   constructor(){}
 
