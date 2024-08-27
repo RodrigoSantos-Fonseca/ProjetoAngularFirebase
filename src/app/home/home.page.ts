@@ -11,103 +11,26 @@ import { MessageService } from '../services/message.service';
 })
 export class HomePage {
 
-  segments: string ='usuarios';
+ paises:any;
+ isLoading: boolean = false;
 
-  usuarios = [
-    {
-      nome: 'Seleide Silva',
-      idade: 20,
-      genero: 'Feminino', 
-      rotinas:[
-        {
-          dia: 'segunda-feira',
-          treinos: [
-            "Rosca Direta",
-            "crucifixo",
-            "Remada Curvada"
-          ]
-        },
-        {
-          dia: 'quarta-feira',
-          treinos: [
-            "Rosca Invertida",
-            "Pulley",
-            "Remada Sentada"
-          ]
-        },
-        {
-          dia: 'sexta-feira',
-          treinos: [
-            "Supino Inclinado",
-            "Biceps Corda",
-            "Biceps Hulk Invertido"
-          ]
-        }
-      ]
-    },
-    {
-      nome: 'Marciano Verdinho',
-      idade: 25,
-      genero: 'masculino', 
-      rotinas:[
-        {
-          dia: 'terça-feira',
-          treinos: [
-            "Prancha Redonda",
-            "Jumping Bom dia Popai",
-            "Flexão de Costas"
-          ]
-        },
-        {
-          dia: 'quinta-feira',
-          treinos: [
-            "Rosca direta",
-            "Pulley corda",
-            "Remada curvada"
-          ]
-        },
-        {
-          dia: 'sabado',
-          treinos: [
-            "Supino declinado",
-            "Triceps Frânces",
-            "Agachamento"
-          ]
-        }
-      ]
-    }
-  ]
-
-  treinos =[
-    {
-      nome:'Treino A (Costas e Biceps)',
-      exercicios: [
-        "Pulley Frente",
-        "Remada Curvada",
-        "Serrote com Halter",
-        "Rosca Martelo",
-        "Banco Scott",
-        "Rosca Concentrada"
-      ]
-    },
-    {
-      nome:'Treino B (Perna)',
-      exercicios: []
-    },
-    {
-      nome:'Treino C (Peito e Triceps)',
-      exercicios:[]
-    },
-    {
-      nome:'Treino D (Ombro)',
-      exercicios:[]
-    }
-    ];
-
-  constructor(){}
-
-
-  trocar(event: any){
-    this.segments = event.detail.value;
+  constructor(){
+    this.getPaisCode();
   }
+
+    getPaisCode(){
+      this.isLoading = true;
+      fetch('https://restcountries.com/v3.1/all?fields=name,ccn3,flags')
+      .then( dados => dados.json() ) 
+      .then( dados => {
+        console.log(dados);
+        this.paises = dados;
+      })
+      .catch(erro => {
+        console.log(erro);
+      })
+      .finally( () => {
+        this.isLoading = false;
+      })
+    }
 }
