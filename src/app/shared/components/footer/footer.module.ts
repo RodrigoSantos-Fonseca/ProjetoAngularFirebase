@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IncrementerComponent } from './incrementer.component';
 import { IonicModule } from '@ionic/angular';
+import { FooterComponent } from './footer.component';
 
 
 
 @NgModule({
   declarations: [
-    IncrementerComponent
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
   ],
   exports:[
-    IncrementerComponent
+    FooterComponent
   ]
 })
-export class IncrementerModule { }
+export class FooterModule { }
