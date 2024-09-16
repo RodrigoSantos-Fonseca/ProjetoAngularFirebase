@@ -3,7 +3,13 @@
 
 <ion-content [fullscreen]="true">
 
-  
+  <ng-container *ngFor="let treino of this.treinos ">
+    <ion-row >
+        <ion-col>            
+            <img src="{{treino.foto}}" alt="">
+        </ion-col>
+    </ion-row>
+  </ng-container>
 
 </ion-content>
 
