@@ -1,0 +1,46 @@
+<ion-row>
+  <ion-col class="ion-text-center" size="12"><h1>Treinos</h1></ion-col>
+</ion-row>
+
+<ion-row class="ion-justify-content-center">
+  <ng-container *ngFor="let treino of this.treinos ">
+            <ion-col class="ion-text-center" size="3">
+              <h1>{{treino.nome}}</h1>
+              <ng-container *ngFor="let imagem of treino.fotos ">
+                      <img src="{{imagem.foto}}" alt="" class="ex">       
+                    </ng-container>
+                  </ion-col>
+  </ng-container>
+
+
+<!-- 
+      <ion-col class="ion-text-center" size="3">
+          <h1>Peito</h1>
+        <ng-container *ngFor="let peito of this.peitos ">
+                  <h1>{{peito.titulo}}</h1>
+                      <img src="{{peito.foto}}" alt="" class="ex">       
+          </ng-container>
+      </ion-col>
+
+
+
+      <ion-col class="ion-text-center"  size="3">
+        <h1>Biceps</h1>
+        <ng-container *ngFor="let bicep of this.biceps ">
+            <h1>{{bicep.titulo}}</h1>
+            <img src="{{bicep.foto}}" alt="" class="ex">     
+          </ng-container>
+      </ion-col>
+
+
+
+      <ion-col class="ion-text-center" size="3">
+        <h1>Triceps</h1>
+        <ng-container *ngFor="let tricep of this.triceps ">
+            <h1>{{tricep.titulo}}</h1>
+            <img src="{{tricep.foto}}" alt="" class="ex">      
+          </ng-container>
+      </ion-col> -->
+
+
+</ion-row>

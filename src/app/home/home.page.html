@@ -1,16 +1,12 @@
 <app-header></app-header>
 
-
 <ion-content [fullscreen]="true">
 
-  <ng-container *ngFor="let treino of this.treinos ">
-    <ion-row >
-        <ion-col>            
-            <img src="{{treino.foto}}" alt="">
-        </ion-col>
-    </ion-row>
-  </ng-container>
-
+    
+    <app-banner></app-banner>
+    
+    <app-galery></app-galery>
+    
 </ion-content>
 
 <app-footer></app-footer>
